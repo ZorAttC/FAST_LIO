@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zoratt/ws_livox/devel/include/**",
+        "/usr/local/include/**",
+        "/usr/local/cuda-11.7/include/**",
+        "/usr/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/zoratt/ws_livox/src/FAST_LIO/include/**",
+        "/home/zoratt/ws_livox/src/livox_to_pointcloud2/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

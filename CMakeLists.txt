@@ -55,11 +55,11 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   eigen_conversions
 )
-
+message(Eigen: ${EIGEN3_INCLUDE_DIR})
 find_package(Eigen3 REQUIRED)
 find_package(PCL 1.8 REQUIRED)
 
-message(Eigen: ${EIGEN3_INCLUDE_DIR})
+
 
 include_directories(
 	${catkin_INCLUDE_DIRS} 
@@ -85,5 +85,8 @@ catkin_package(
 )
 
 add_executable(fastlio_mapping src/laserMapping.cpp include/ikd-Tree/ikd_Tree.cpp src/preprocess.cpp)
+add_executable(odo2transform src/odometry2transform.cpp)
+
 target_link_libraries(fastlio_mapping ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${PYTHON_LIBRARIES})
 target_include_directories(fastlio_mapping PRIVATE ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(odo2transform ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${PYTHON_LIBRARIES})
